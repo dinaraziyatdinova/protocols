@@ -36,7 +36,7 @@
     root.innerHTML=sectionHeading('01 / БАЗА ПРОТОКОЛОВ','Каталог протоколов','39 технологий, организованных по роли в сети. Откройте карточку, чтобы увидеть этапы работы и связанные понятия.','EXPLORE / 39')+
       `<div class="control-row"><div class="filters" role="group" aria-label="Фильтр по категориям">${Object.entries(cats).map(([k,v])=>`<button type="button" class="filter-button ${k===state.filter?'active':''}" data-filter="${k}">${esc(v)} <span class="filter-count">${k==='all'?'39':protocols.filter(p=>p.category===k).length}</span></button>`).join('')}</div>
       <label class="search-box"><span class="search-icon" aria-hidden="true">⌕</span><input id="catalog-search" type="search" value="${esc(state.search)}" placeholder="Поиск по названию или функции..." aria-label="Поиск по протоколам" /></label></div>
-      <div class="micro-label" id="catalog-count" aria-live="polite" style="margin-bottom:14px;color:#91a3c3">Найдено: 39 из 39</div><div id="protocol-cards" class="card-grid"></div>`;
+      <div class="micro-label" id="catalog-count" aria-live="polite" style="margin-bottom:14px;color:#B6BBA8">Найдено: 39 из 39</div><div id="protocol-cards" class="card-grid"></div>`;
     renderCards();
   }
   function graph(){
